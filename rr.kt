@@ -128,7 +128,7 @@ fun gameLoop(players: ArrayList<Player>, observer: Observer, g: Gun) : Boolean {
         }
     }
     return true
-    println("We have a winner. See you next time. May bee... BANG!")1
+    println("We have a winner. See you next time. May bee... BANG!")
 
 }
 
