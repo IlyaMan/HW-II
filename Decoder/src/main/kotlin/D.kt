@@ -41,7 +41,7 @@ fun main(arg: Array<String>) {
             i = 0
 //            println("${m} stands for ${list}")
             println("Symbol ${list[0]} links to line ${list[2]} column ${if (list[3] > 0) list[3] else File("src/main/resources/input.js").readLines()[list[2]].length
-            - list[3]} of file ${sources[list[1]]} and belongs to ${names[list[4]]}")
+            + list[3]} of file ${sources[list[1]]} and belongs to ${names[list[4]]}")
 
         }
     }
