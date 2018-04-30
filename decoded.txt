@@ -1,0 +1,12 @@
+Symbol 0 links to line 0 column 26 of file input.js and belongs to stayClear
+Symbol 9 links to line 0 column 9 of file input.js and belongs to stayClear
+Symbol 19 links to line 0 column 19 of file input.js and belongs to x
+Symbol 21 links to line 0 column 22 of file input.js and belongs to y
+Symbol 24 links to line 1 column 49 of file input.js and belongs to y
+Symbol 31 links to line 1 column 42 of file input.js and belongs to x
+Symbol 33 links to line 1 column 38 of file input.js and belongs to y
+Symbol 35 links to line 4 column 44 of file input.js and belongs to console
+Symbol 43 links to line 4 column 36 of file input.js and belongs to log
+Symbol 47 links to line 4 column 32 of file input.js and belongs to stayClear
+Symbol 57 links to line 4 column 7 of file input.js and belongs to stayClear
+Symbol 60 links to line 4 column 11 of file input.js and belongs to stayClear
