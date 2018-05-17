@@ -77,12 +77,13 @@ class II(var name: String = "AllIn") {
 
 
 class Gun(var observer: Observer) {
+    val revolversSize = 6;
     fun loadTheGun(): MutableList<Boolean> {
         var b: MutableList<Boolean> = mutableListOf()
-        for (i in 1..6) { // revolvers size is constantly 6
+        for (i in 1..revolversSize) { //revolvers size is constant
             b.add(false)
         }
-        b[(Math.random() * 100).toInt() % 6] = true
+        b[(Math.random() * 100).toInt() % revolversSize] = true
         return b
     }
 
@@ -90,7 +91,7 @@ class Gun(var observer: Observer) {
     var index: Int = 0
     var gun: Boolean = false
         get() {
-            if (index < 5) {
+            if (index < revolversSize - 1) {
                 index += 1
                 return revolver[index]
             } else {
