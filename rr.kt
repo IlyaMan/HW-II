@@ -18,11 +18,11 @@ class Yuppi() {
     val deadPhrase = mutableListOf("I am so young:(", "I'm already dead", "Oh me shunderu")
 
     fun getWinningPhrase(): String {
-        return (winPhrase[(Math.random() * 100 % 3).toInt()])
+        return (winPhrase[(Math.random() * 100 % winPhrase.size).toInt()])
     }
 
     fun getDeadPhrase(): String {
-        return (deadPhrase[(Math.random() * 100 % 3).toInt()])
+        return (deadPhrase[(Math.random() * 100 % deadPhrase.size).toInt()])
     }
 
 }
@@ -79,7 +79,7 @@ class II(var name: String = "AllIn") {
 class Gun(var observer: Observer) {
     fun loadTheGun(): MutableList<Boolean> {
         var b: MutableList<Boolean> = mutableListOf()
-        for (i in 1..6) {
+        for (i in 1..6) { // revolvers size is constantly 6
             b.add(false)
         }
         b[(Math.random() * 100).toInt() % 6] = true
