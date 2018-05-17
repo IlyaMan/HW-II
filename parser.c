@@ -154,6 +154,11 @@ CMD *Line(char **parsed) {
         }
 
     } else {
+        if (!(checkWithArguments(parsed[0]) || checkWithOutArguments(parsed[0]))) {
+            printf("UNKNOWN CMD:\n");
+            printf("%s %s %s \n", parsed[0], parsed[1], parsed[2]);
+            return 0;
+        }
         strcpy(cmd->id, parsed[0]);
         strcpy(cmd->value, parsed[1]);
     }
@@ -161,7 +166,7 @@ CMD *Line(char **parsed) {
 }
 
 void parser(CMD *list, int *currentSize) {
-    char *filename = "../program.txt";
+    char *filename = "program.txt";
     char buffer[BUFFER_SIZE];
     char word[WORD_BUFFER_SIZE];
     FILE *fptr;

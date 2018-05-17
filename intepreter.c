@@ -13,7 +13,13 @@ void interpreter(CMD *list, int size) {
 
     while (i < size) {
         if (strcmp(list[i].id, RET) == 0) {
-            printf("%d WAS ON THE TOP OF THE STACK, WHEN PROGRAMM CORRECTLY ENDED", popStack(stack));
+            if (stack->size > 0){
+                printf("%d WAS ON THE TOP OF THE STACK, WHEN PROGRAM CORRECTLY ENDED", popStack(stack));
+            }
+            else {
+                printf("PROGRAM ENDED CORRECTLY. STACK WAS EMPTY");
+            }
+
             exit(0);
         }
         if (strcmp(list[i].id, JMP) == 0) {

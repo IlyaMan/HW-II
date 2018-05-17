@@ -28,7 +28,7 @@ int popStack(Stack *stack) {
         stack->size -= 1;
         return item->value;
     } else {
-        printf("Stack is empty. You can't take elements from it!");
+        printf("Stack is empty. You can't take elements from it!\n");
         return 0;
     }
 }
