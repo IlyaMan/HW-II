@@ -12,7 +12,8 @@ class GameLoop() : KoinComponent {
 
     fun gameLoop(): Boolean {
         for (i: Int in 1..PLAYERS_SIZE) {
-            val ii: Strategy by inject()
+            val yuppi : Huray by inject()
+            print(yuppi.getDeadPhrase())
             val player: Bot by inject()
             players.add(player)
         }

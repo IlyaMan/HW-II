@@ -1,4 +1,4 @@
-class Player(override var money: Int = 1, override var alive: Boolean = true, val ii_: Strategy) : Bot {
+class Player(override var money: Int = 1, override var alive: Boolean = true, val ii_: Strategy, val yuppi : Huray) : Bot {
     override val ii = ii_.myII
     val name = arrayListOf("John", "Jack", "Stack", "Crack", "Pack", "Check", "RedNeck")[(Math.random() * 100 % 6).toInt()]
     override fun shoot(g: Shootable, observer: WatchOut) {
@@ -12,13 +12,13 @@ class Player(override var money: Int = 1, override var alive: Boolean = true, va
                     money = 0
                 } else {
                     alive = false
-                    println("${name}: ${Yuppi().getDeadPhrase()}")
+                    println("${name}: ${yuppi.getDeadPhrase()}")
                     observer.shot = true
                 }
             } else {
                 money += 1
                 if (money >= WINCONST) {
-                    println("${name}: ${Yuppi().getWinningPhrase()}")
+                    println("${name}: ${yuppi.getWinningPhrase()}")
                     observer.winner = true
                 }
             }
